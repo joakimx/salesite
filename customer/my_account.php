@@ -95,6 +95,8 @@
           include("change_pass.php");
         } else if (isset($_GET['delete_account'])) {
           include("delete_account.php");
+        } else if (isset($_GET['my_orders'])) {
+          include("my_orders.php");
         }
         ?>
 

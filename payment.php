@@ -20,6 +20,19 @@
       $total += $values;
     }
   }
+
+  //Getting quantity of the products
+  $get_qty = "SELECT * FROM cart WHERE p_id = '$pro_id'";
+  $run_qty = mysqli_query($con, $get_qty);
+  $row_qty = mysqli_fetch_array($run_qty);
+  $qty = $row_qty['qty'];
+  //If qty is not 0, assign to qty, otherwise set qty to 0
+  if($qty == 0) {
+    $qty = 1;
+  } else {
+    $qty = $qty;
+  }
+
    ?>
 
   <h2 align="center">Pay now with Paypal: </h2>
@@ -33,7 +46,9 @@
 
   <!-- Specify details about the item that buyers will purchase. -->
   <input type="hidden" name="item_name" value="<?php echo $product_name; ?>">
+  <input type="hidden" name="item_number" value="<?php echo $pro_id; ?>">
   <input type="hidden" name="amount" value="<?php echo $total; ?>">
+  <input type="hidden" name="quantity" value="<?php echo $qty; ?>">
   <input type="hidden" name="currency_code" value="USD">
   <input type="hidden" name="return" value="http://159.203.143.249/salesite/paypal_success.php" />
   <input type="hidden" name="cancel_return" value="http://159.203.143.249/salesite/paypal_cancel.php" />
