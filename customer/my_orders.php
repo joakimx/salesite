@@ -55,8 +55,6 @@
     <td> <?php echo $invoice_number; ?></td>
     <td> <?php echo $order_date; ?></td>
     <td> <?php echo $status; ?></td>
-    <td><a href="index.php?edit_pro=<?php echo $pro_id; ?>">Edit</a></td>
-    <td><a href="delete_pro.php?delete_pro=<?php echo $pro_id; ?>">Delete</a></td>
   </tr>
 
 <?php
