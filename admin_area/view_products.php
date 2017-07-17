@@ -42,10 +42,7 @@ if (!isset($_SESSION['user_email'])) {
     <td><a href="delete_pro.php?delete_pro=<?php echo $pro_id; ?>"">Delete</a></td>
   </tr>
 
-<?php
-  }
-   }
-?>
-
-
+	<?php } ?>
 </table>
+
+<?php } ?>

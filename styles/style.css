@@ -28,7 +28,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  background-color: skyblue;
+  background-color: #DCDCDC;
 }
 
 .main_wrapper {
@@ -54,7 +54,7 @@ body {
 .menubar {
   width: 1000px;
   height: 50px;
-  background: gray;
+  background: #483D8B;
   color: white;
 }
 
@@ -94,13 +94,13 @@ body {
 .content_wrapper {
   width: 1000px;
   margin: auto;
-  background: pink;
+  background: #F5FFFA;
 }
 
 #content_area {
   width: 800px;
   float: right;
-  background: pink;
+  background: #F5FFFA;
 }
 
 #sidebar {
@@ -169,7 +169,11 @@ body {
 
 #footer {
   width: 1000px;
-  height: 100px;
-  background: gray;
+  height: 75px;
+  background: #140c46;
   clear: both;
+}
+
+#footer h2 {
+  color: #FFFAFA;
 }

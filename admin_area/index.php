@@ -2,7 +2,10 @@
 session_start();
 if (!isset($_SESSION['user_email'])) {
   echo "<script>window.open('login.php?not_admin=You\'re not an Administrator!', '_self')</script>";
+
 } else {
+ echo $_SESSION['user_email'];
+
 ?>
 
 

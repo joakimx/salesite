@@ -1,8 +1,3 @@
-<?php
-if (!isset($_SESSION['user_email'])) {
-  echo "<script>window.open('login.php?not_admin=You\'re not an Administrator!', '_self')</script>";
-} else {
-?>
 <!DOCTYPE>
 <?php
 include("includes/db.php");
@@ -86,6 +81,7 @@ include("includes/db.php");
 </body>
 </html>
 <?php
+echo "Done";
 if(isset($_POST['insert_post']))
 {
   //Get data fom fields
@@ -109,7 +105,8 @@ if(isset($_POST['insert_post']))
     if($insert_pro)
     {
       echo "<script>alert('Product Added')</script>";
-      echo "<script>window.open('insert_product.php', '_self')";
+      echo "<script>window.open('index.php?insert_product','_self')</script>";
     }
+
 }
-	} ?>
+?>
